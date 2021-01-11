@@ -1,0 +1,19 @@
+.header {
+	width: 100vw;
+	max-width: 100%;
+	min-width: 330px;
+	height: 60px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: sticky;
+	top: 0px;
+	background-color: white;
+	z-index: 10;
+	transition: all 0.5s ease;
+}
+
+/* Darkmode */
+.header.darkmode {
+	background-color: #212121;
+}

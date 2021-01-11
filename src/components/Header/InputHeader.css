@@ -1,0 +1,84 @@
+.input-header {
+	display: flex;
+	width: 65%;
+	height: inherit;
+	justify-content: center;
+	align-items: center;
+}
+
+.input-wrap {
+	width: 70%;
+	min-width: 166px;
+	display: flex;
+	justify-content: space-between;
+	height: auto;
+	border: 1px solid rgb(189, 189, 189);
+	border-radius: 0px;
+	transition: all 0.5s ease;
+}
+
+.input {
+	padding: 6px 10px;
+	min-width: 100px;
+	width: 100%;
+	border: none;
+	outline: none;
+	font-size: 1rem;
+	transition: all 0.5s ease;
+}
+
+.search-btn {
+	padding: 8px 25px;
+	outline: none;
+	border-radius: 0px;
+	border-right: none;
+	border-top: none;
+	border-bottom: none;
+	border-left: 1px solid rgb(189, 189, 189);
+	background-color: #d8d8d8;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	opacity: 0.6;
+	box-shadow: none;
+	transition: all 0.5s ease;
+}
+
+.search-btn:hover {
+	opacity: 0.9;
+	box-shadow: 0px 1px 2px #8a8a8aa1;
+}
+
+/* Darkmode */
+.input-header.darkmode input {
+	background-color: #121212;
+	transition: all 0.5s ease;
+	color: #e9e9e9;
+}
+
+.input-header.darkmode input::placeholder {
+	color: #e6e6e669;
+	transition: all 0.5s ease;
+}
+.input-header.darkmode .input-wrap {
+	border: 0.5px solid #ffffff25;
+	transition: all 0.5s ease;
+}
+
+.input-header.darkmode .search-btn {
+	background-color: #313131;
+	color: rgba(255, 255, 255, 0.733);
+	border: none;
+	transition: all 0.5s ease;
+}
+
+.input-header.darkmode .search-btn:hover {
+	opacity: 0.9;
+	box-shadow: none;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+	.input-wrap {
+		width: 90%;
+	}
+}

@@ -1,0 +1,26 @@
+.filter {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	max-width: 100%;
+	min-width: 500px;
+	margin-left: 250px;
+	border-top: 1px solid rgba(218, 218, 218, 0.637);
+	border-bottom: 1px solid rgba(218, 218, 218, 0.637);
+	transition: all 0.5s ease;
+}
+
+/* Darkmode */
+.filter.darkmode {
+	background-color: #212121;
+	transition: all 0.5s ease;
+	border-top: 1px solid rgba(78, 78, 78, 0.637);
+	border-bottom: 1px solid rgba(78, 78, 78, 0.637);
+}
+
+/* Responsive */
+@media (max-width: 760px) {
+	.filter {
+		margin-left: 0px;
+	}
+}

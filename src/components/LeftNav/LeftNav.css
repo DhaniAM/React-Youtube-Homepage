@@ -1,0 +1,62 @@
+.left-nav {
+	transition: all 0.5s ease;
+	position: fixed;
+	width: 250px;
+	height: 600px;
+	overflow-y: hidden;
+	background-color: white;
+	z-index: 10;
+}
+
+.left-nav:hover {
+	overflow-y: auto;
+}
+
+/* .left-nav hr {
+	border: 0.1px solid rgba(133, 133, 133, 0.212);
+	margin: 10px 0;
+} */
+
+/* Scrollbar */
+.left-nav::-webkit-scrollbar {
+	width: 8px;
+}
+
+/* Track */
+.left-nav::-webkit-scrollbar-track {
+	/* box-shadow: inset 0 0 5px grey; */
+	/* border-radius: 10px; */
+}
+
+/* Bar */
+.left-nav::-webkit-scrollbar-thumb {
+	background: #d3d3d3;
+	/* border-radius: 10px; */
+}
+
+/* Handle on hover */
+.left-nav::-webkit-scrollbar-thumb:hover {
+	background: #d3d3d3;
+}
+
+/* Track */
+.left-nav::-webkit-scrollbar-track-piece {
+	background: none;
+}
+
+/* .hidden {
+	display: none;
+} */
+
+/* DarkMode */
+.left-nav.darkmode {
+	background-color: #212121;
+	transition: all 0.5s ease;
+}
+
+/* Responsive */
+/* @media (max-width: 760px) {
+	.left-nav {
+		display: none;
+	}
+} */
