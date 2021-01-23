@@ -2,7 +2,7 @@
 	transition: all 0.5s ease;
 	position: fixed;
 	width: 250px;
-	height: 600px;
+	height: 91%;
 	overflow-y: hidden;
 	background-color: white;
 	z-index: 10;
@@ -12,10 +12,10 @@
 	overflow-y: auto;
 }
 
-/* .left-nav hr {
+.left-nav hr {
 	border: 0.1px solid rgba(133, 133, 133, 0.212);
 	margin: 10px 0;
-} */
+}
 
 /* Scrollbar */
 .left-nav::-webkit-scrollbar {

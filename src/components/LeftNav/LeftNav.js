@@ -3,6 +3,7 @@ import React from "react";
 import Nav from "./Nav";
 import "./LeftNav.css";
 import { navProps } from "./navProps";
+import nextId from "react-id-generator";
 
 const LeftNav = ({ isNavOpen, isDarkmode }) => {
 	return (
@@ -15,14 +16,19 @@ const LeftNav = ({ isNavOpen, isDarkmode }) => {
 			}
 		>
 			{navProps.map(item => {
-				return (
+				return [
 					<Nav
+						key={nextId("nav-id:")}
 						name={item.name}
 						icon={item.icon}
 						active={item.active}
 						isDarkmode={isDarkmode}
-					/>
-				);
+					/>,
+					item.name === "Subscriptions" ||
+					item.name === "Live" ? (
+						<hr />
+					) : null,
+				];
 			})}
 		</div>
 	);

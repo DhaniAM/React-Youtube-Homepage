@@ -1,6 +1,7 @@
 import React from "react";
 import FilterItem from "./FilterItem";
 import "./Filter.css";
+import nextId from "react-id-generator";
 
 const filterItem = [
 	"HTML",
@@ -24,7 +25,11 @@ const Filter = ({ isNavOpen, isDarkmode }) => {
 		>
 			{filterItem.map(item => {
 				return (
-					<FilterItem name={item} isDarkmode={isDarkmode} />
+					<FilterItem
+						key={nextId("filter-id:")}
+						name={item}
+						isDarkmode={isDarkmode}
+					/>
 				);
 			})}
 		</div>

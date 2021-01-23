@@ -1,6 +1,7 @@
 .input-header {
 	display: flex;
 	width: 65%;
+	min-width: 10px;
 	height: inherit;
 	justify-content: center;
 	align-items: center;
@@ -49,6 +50,11 @@
 }
 
 /* Darkmode */
+.input-header.darkmode .input-wrap {
+	border: 0.5px solid #ffffff25;
+	transition: all 0.5s ease;
+}
+
 .input-header.darkmode input {
 	background-color: #121212;
 	transition: all 0.5s ease;
@@ -57,10 +63,6 @@
 
 .input-header.darkmode input::placeholder {
 	color: #e6e6e669;
-	transition: all 0.5s ease;
-}
-.input-header.darkmode .input-wrap {
-	border: 0.5px solid #ffffff25;
 	transition: all 0.5s ease;
 }
 
@@ -78,7 +80,67 @@
 
 /* Responsive */
 @media (max-width: 600px) {
+	.input-header {
+		justify-content: flex-end;
+	}
+
 	.input-wrap {
-		width: 90%;
+		min-width: 20px;
+		justify-content: center;
+		border: none;
+		justify-content: flex-end;
+	}
+	.input {
+		display: none;
+	}
+	.search-btn {
+		padding: 5px;
+		background: none;
+		border: none;
+		font-size: 1.1rem;
+	}
+
+	.search-btn:hover {
+		opacity: 1;
+		box-shadow: none;
+	}
+
+	/* Darkmode */
+	.input-header.darkmode input {
+		display: none;
+	}
+
+	.input-header.darkmode .input-wrap {
+		border: none;
+		transition: all 0.5s ease;
+	}
+
+	.input-header.darkmode .search-btn {
+		padding: 5px;
+		outline: none;
+		border-radius: 0px;
+		border-right: none;
+		border-top: none;
+		border-bottom: none;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		opacity: 0.6;
+		box-shadow: none;
+
+		background: none;
+		color: #e9e9e9;
+		border: none;
+		transition: all 0.5s ease;
+	}
+
+	.input-header.darkmode .search-btn:hover {
+		opacity: 1;
+		box-shadow: none;
+	}
+}
+
+@media (max-width: 350px) {
+	.input-header {
+		width: 30px;
 	}
 }

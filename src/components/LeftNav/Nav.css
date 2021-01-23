@@ -8,6 +8,10 @@
 	cursor: pointer;
 }
 
+.left-nav-icon {
+	color: #606060;
+}
+
 .nav:hover {
 	background-color: rgba(230, 230, 230, 0.753);
 }
@@ -48,4 +52,12 @@
 /* Active tab */
 .nav.active {
 	background-color: rgba(150, 150, 150, 0.411);
+}
+
+.nav.active h4 {
+	font-weight: bold;
+}
+
+.nav.active .left-nav-icon {
+	color: red;
 }

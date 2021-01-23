@@ -1,7 +1,7 @@
 .right-header {
 	width: 260px;
 	max-width: 260px;
-	/* min-width: 180px; */
+	min-width: 192px;
 	height: inherit;
 	display: flex;
 	justify-content: space-around;
@@ -37,12 +37,8 @@
 }
 
 /* Responsive */
-@media (max-width: 600px) {
+@media (max-width: 350px) {
 	.right-header {
-		width: 150px;
-	}
-	.notification,
-	.apps {
-		display: none;
+		width: 180px;
 	}
 }

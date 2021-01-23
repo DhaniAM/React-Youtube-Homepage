@@ -10,6 +10,8 @@ const App = () => {
 	const [isDarkmode, setIsDarkmode] = useState(false);
 	let browserSize = window.innerWidth;
 	const [browserSizes, setBrowserSizes] = useState(browserSize);
+	const [showSearch, setShowSearch] = useState(false);
+
 	// If browser big, show Nav
 	useEffect(() => {
 		if (browserSize < 760) {
@@ -18,15 +20,21 @@ const App = () => {
 			setIsNavOpen(true);
 		}
 	}, []);
-	// Close nav if open, if on small screen
+
 	useEffect(() => {
+		// Close nav if open, if on small screen
 		if (browserSizes < 760) {
 			if (isNavOpen) {
 				setIsNavOpen(false);
 			}
 		}
+		// Hide search if screen below 400px
+		// if (browserSizes < 400) {
+		// 	setShowSearch(false);
+		// }
 	}, [browserSizes]);
 
+	// Listen to browser size
 	useLayoutEffect(() => {
 		window.addEventListener("resize", () =>
 			setBrowserSizes(window.innerWidth)
@@ -43,6 +51,9 @@ const App = () => {
 				setIsNavOpen={setIsNavOpen}
 				isDarkmode={isDarkmode}
 				setIsDarkmode={setIsDarkmode}
+				browserSizes={browserSizes}
+				showSearch={showSearch}
+				setShowSearch={setShowSearch}
 			/>
 			<div className='content-wrap'>
 				<LeftNav

@@ -39,7 +39,6 @@
 
 img.yt-logo {
 	height: 25px;
-	margin-right: 10px;
 }
 
 /* Darkmode */
@@ -51,9 +50,15 @@ img.yt-logo {
 /* Responsive */
 @media (max-width: 600px) {
 	.left-header {
-		width: 50px;
+		width: 120px;
 	}
-	.logo {
-		display: none;
+}
+
+@media (max-width: 350px) {
+	.left-header {
+		width: 80px;
+	}
+	.nav-bar {
+		margin: 0px;
 	}
 }

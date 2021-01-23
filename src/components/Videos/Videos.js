@@ -2,6 +2,7 @@ import React from "react";
 import Video from "./Video";
 import "./Videos.css";
 import videoProps from "./videoProps";
+import nextId from "react-id-generator";
 
 const Videos = ({ isNavOpen, isDarkmode, browserSize }) => {
 	return (
@@ -23,6 +24,7 @@ const Videos = ({ isNavOpen, isDarkmode, browserSize }) => {
 			{videoProps.map(item => {
 				return (
 					<Video
+						key={nextId("video-id:")}
 						title={item.title}
 						channelName={item.channelName}
 						views={item.views}
